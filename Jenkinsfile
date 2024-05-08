@@ -14,5 +14,10 @@ pipeline {
          sh '${BUNPATH}/bun install'
        }
      }
+     stage('Lint') {
+       steps {
+         sh '${BUNPATH}/bunx eslint .'
+       }
+     }
    }
  }
